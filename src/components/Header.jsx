@@ -11,26 +11,25 @@
     // check that your links work!
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-class Header extends React.Component {
-    render() {
-        return (
+const Header = () => {
+    return (
             <ul className="Header">
                 <li className="Logo">
                     Catstagram
                 </li>
                 <li>
-                    Home
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    About
+                    <Link to="/about">About</Link>
                 </li>
                 <li>
                     Profile
                 </li>
             </ul>
         )
-    }
 }
 
 export default Header;
