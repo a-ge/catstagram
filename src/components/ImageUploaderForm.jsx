@@ -37,11 +37,27 @@
 import React from 'react';
 
 class ImageUploaderForm extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            url: ""
+        }
+    }
+
+    handleChange = (e) => {
+        e.preventDefault()
+        const { url } = this.state
+        this.props.new_photo(url)
+    }
+
     render() {
         return (
             <form className="ImageUploaderForm">
-                <input></input>
-                <button></button>
+                <input value={this.state.url}
+                    onChange={(e) => this.handleChange(e)} />
+                <button className="SubmitButton"
+                    onClick={this.handleSubmit}>Submit
+                </button>
             </form>
         )
     }
