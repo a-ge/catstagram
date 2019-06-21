@@ -11,3 +11,27 @@
     // check that your links work!
 
 import React from 'react';
+
+class Header extends React.Component {
+    render() {
+        const {} = this.props;
+        return (
+            <ul className="Header">
+                <li className="Logo">
+                    Catstagram
+                </li>
+                <li>
+                    Home
+                </li>
+                <li>
+                    About
+                </li>
+                <li>
+                    Profile
+                </li>
+            </ul>
+            )
+    }
+}
+
+export default Header;
