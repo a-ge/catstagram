@@ -20,12 +20,14 @@ import data from '../../data.json';
 import ImageUploaderForm from '../components/ImageUploaderForm.jsx'
 import FeedList from '../components/FeedList.jsx'
 
+const { photos } = data;
+
 class Homepage extends React.Component {
     render() {
         return (
             <div className="HomePage">
-            	<ImageUploaderForm	/>
-            	<FeedList />
+	            	<ImageUploaderForm	/>
+	            	<FeedList photos={photos}/>
             </div>
         )
     }
