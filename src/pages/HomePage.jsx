@@ -23,10 +23,36 @@ import FeedList from '../components/FeedList.jsx'
 const { photos } = data;
 
 class Homepage extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            allPhotos: data.photos
+        }
+    }
+
+    handleAddPhoto = (url) => {
+        const new_photo = {
+            "id": photos.length,
+            "title":"new image",
+            "url": url,
+            "likes": 0,
+            "userLiked": false
+        }
+
+        photos.push(new_photo)
+
+        this.setState((prevState) => {
+            return {
+                photos: photos
+            }
+        })
+
+    }
+
     render() {
         return (
             <div className="HomePage">
-	            	<ImageUploaderForm	/>
+	            	<ImageUploaderForm	new_photo={this.handleAddPhoto}/>
 	            	<FeedList photos={photos}/>
             </div>
         )
