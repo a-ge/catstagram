@@ -22,9 +22,11 @@ import React from 'react';
 
 class Likes extends React.Component {
     render() {
+        const { totalLikes } = this.props
+
         return (
             <div className="Likes">
-                <span>Like</span>
+                <span>{totalLikes} likes</span>
                 <button className="LikesButton">Like</button>
             </div>
         )
