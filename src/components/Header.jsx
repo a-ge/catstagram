@@ -14,7 +14,6 @@ import React from 'react';
 
 class Header extends React.Component {
     render() {
-        const {} = this.props;
         return (
             <ul className="Header">
                 <li className="Logo">
@@ -30,7 +29,7 @@ class Header extends React.Component {
                     Profile
                 </li>
             </ul>
-            )
+        )
     }
 }
 
